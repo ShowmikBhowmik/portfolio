@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showmik Bhowmik - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Profile Gate (Netflix "Who's Watching?") -->
+    <div class="profile-gate" id="profileGate">
+        <div class="gate-logo">SHOWMIK</div>
+        <div class="profile-gate-inner">
+            <h1 class="profile-heading">Who's watching?</h1>
+            <div class="profiles-row">
+                <button class="profile-card" onclick="enterSite()">
+                    <div class="profile-avatar" style="background: linear-gradient(135deg, #E50914, #831010);">
+                        <img src="minion-fun.png" alt="Recruiter" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
+                    </div>
+                    <div class="profile-name">Recruiter</div>
+                </button>
+                <button class="profile-card" onclick="enterShowmikProfile()">
+                    <div class="profile-avatar" style="background: linear-gradient(135deg, #6D28D9, #4C1D95);">
+                        <img src="minion-serious.png" alt="Showmik" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
+                    </div>
+                    <div class="profile-name">Showmik</div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Netflix-style Intro Screen -->
+    <div class="intro-screen" id="introScreen">
+        <canvas id="introCanvas"></canvas>
+        <div class="intro-overlay"></div>
+        <div class="intro-text" id="introText">
+            <div class="intro-brand">SHOWMIK</div>
+            <div class="intro-tagline">SOFTWARE ENGINEER</div>
+            <div class="intro-tagline intro-tagline-2">PRODUCT MANAGER</div>
+            <div class="intro-wait">&lpar; WAIT &rpar;</div>
+        </div>
+    </div>
+
+    <!-- Showmik Profile Page -->
+    <div class="showmik-profile" id="showmikProfile">
+        <video id="spVideo" class="sp-video" autoplay muted loop playsinline>
+            <source src="snow-bg.mp4" type="video/mp4">
+        </video>
+        <div class="sp-video-overlay"></div>
+        <div class="sp-gradient-top"></div>
+        <div class="sp-gradient-bottom"></div>
+
+        <!-- Back button -->
+        <button class="sp-back" onclick="backFromShowmikProfile()">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+            Back
+        </button>
+
+        <div class="sp-content">
+            <div class="sp-badge">P R O F I L E</div>
+            <h1 class="sp-name">SHOWMIK BHOWMIK</h1>
+            <div class="sp-meta">
+                <span class="sp-tag">Software Engineer</span>
+                <span class="sp-dot"></span>
+                <span class="sp-tag">RIT '26</span>
+                <span class="sp-dot"></span>
+                <span class="sp-tag">CS Major</span>
+            </div>
+            <p class="sp-description">
+                I'm a Computer Science student at Rochester Institute of Technology, graduating in December 2026.
+                With experience across full-stack development, AI/ML and cloud technologies I love tackling complex
+                challenges. From optimizing backend systems to creating accessible AI tools I'm constantly learning
+                and growing. And I want to keep growing.
+            </p>
+
+            <div class="sp-actions">
+                <a href="Showmik_Bhowmik_Resume.pdf" target="_blank" class="sp-btn sp-btn-play">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="black"><polygon points="5,3 19,12 5,21"/></svg>
+                    Resume
+                </a>
+                <a href="https://github.com/showmikbhowmik" target="_blank" class="sp-btn sp-btn-secondary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    GitHub
+                </a>
+                <a href="https://linkedin.com/in/showmikbhowmik" target="_blank" class="sp-btn sp-btn-secondary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                    LinkedIn
+                </a>
+            </div>
+
+            <div class="sp-episodes">
+                <h3 class="sp-episodes-title">Quick Links</h3>
+                <div class="sp-episode-list">
+                    <a href="#" class="sp-episode" onclick="goToSection('projects')">
+                        <div class="sp-episode-num">1</div>
+                        <div class="sp-episode-info">
+                            <h4>Projects</h4>
+                            <p>VisionVoice, CodeChef, and more</p>
+                        </div>
+                    </a>
+                    <a href="#" class="sp-episode" onclick="goToSection('experience')">
+                        <div class="sp-episode-num">2</div>
+                        <div class="sp-episode-info">
+                            <h4>Experience</h4>
+                            <p>Lapp Insulators, Worldwide Electric, RIT</p>
+                        </div>
+                    </a>
+                    <a href="#" class="sp-episode" onclick="goToSection('skills')">
+                        <div class="sp-episode-num">3</div>
+                        <div class="sp-episode-info">
+                            <h4>Skills & Tech</h4>
+                            <p>Languages, AI/ML, Web Dev, Tools</p>
+                        </div>
+                    </a>
+                    <a href="#" class="sp-episode" onclick="goToSection('contact')">
+                        <div class="sp-episode-num">4</div>
+                        <div class="sp-episode-info">
+                            <h4>Contact</h4>
+                            <p>Get in touch</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main App -->
+    <div class="main-app hidden" id="mainApp">
+
+        <!-- Navigation -->
+        <nav class="navbar" id="navbar">
+            <div class="nav-left">
+                <div class="nav-brand">SHOWMIK</div>
+                <div class="nav-links">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#experience" class="nav-link">Experience</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+            </div>
+            <div class="nav-right">
+                <button class="nav-back-btn" onclick="showProfileGate()">BACK</button>
+            </div>
+        </nav>
+
+        <!-- Hero Banner -->
+        <section id="home" class="hero-banner">
+            <canvas id="heroCanvas"></canvas>
+            <div class="hero-gradient-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-badge">P O R T F O L I O</div>
+                <h1 class="hero-title">SHOWMIK BHOWMIK</h1>
+                <p class="hero-meta">Software Engineer &bull; AI/ML Enthusiast &bull; RIT '26</p>
+                <p class="hero-description">Building intelligent solutions that scale. Passionate about full-stack development, machine learning, and creating tools that make a real impact.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-play">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="black"><polygon points="5,3 19,12 5,21"/></svg>
+                        View My Work
+                    </a>
+                    <a href="https://github.com/showmikbhowmik" target="_blank" class="btn btn-info">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="content-section fade-in">
+            <h2 class="row-title">Featured Projects</h2>
+            <div class="scroll-row">
+                <!-- VisionVoice -->
+                <div class="card">
+                    <div class="card-image" style="background: #2b2f33;">
+                        <img src="Vision  Voice.png" alt="VisionVoice" class="card-img card-img-contain">
+                        <div class="card-badge">AI/ML</div>
+                        <div class="card-image-label">
+                            <h3>VisionVoice</h3>
+                            <p>AI ACCESSIBILITY TOOL</p>
+                        </div>
+                    </div>
+                    <div class="card-hover-info">
+                        <h3>VisionVoice</h3>
+                        <p class="card-subtitle">AI-Powered Accessibility</p>
+                        <p>AI-powered accessibility tool converting videos to audio/text using BLIP, SpeechT5, and Gemini models.</p>
+                        <div class="card-tags">
+                            <span>Python</span>
+                            <span>FastAPI</span>
+                            <span>Angular</span>
+                            <span>AI/ML</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="https://github.com/showmikbhowmik" target="_blank" class="card-btn-round" title="GitHub">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="white">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CodeChef -->
+                <div class="card">
+                    <div class="card-image" style="background: linear-gradient(135deg, #E50914, #831010);">
+                        <img src="Codechef.png" alt="CodeChef" class="card-img">
+                        <div class="card-badge">Web Dev</div>
+                        <div class="card-image-label">
+                            <h3>CodeChef</h3>
+                            <p>RECIPE PLATFORM</p>
+                        </div>
+                    </div>
+                    <div class="card-hover-info">
+                        <h3>CodeChef</h3>
+                        <p class="card-subtitle">AI Recipe Personalization</p>
+                        <p>Recipe personalization platform with AI recommendations, achieving 50% reduction in load times.</p>
+                        <div class="card-tags">
+                            <span>Angular</span>
+                            <span>TypeScript</span>
+                            <span>GPT-3.5</span>
+                            <span>HTML/CSS</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="https://github.com/showmikbhowmik" target="_blank" class="card-btn-round" title="GitHub">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="white">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- More Coming Soon -->
+                <div class="card">
+                    <div class="card-image" style="background: var(--netflix-card); border: 2px dashed var(--text-muted);">
+                        <div class="card-plus">+</div>
+                    </div>
+                    <div class="card-hover-info">
+                        <h3>More Projects</h3>
+                        <p>Coming soon...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="content-section fade-in">
+            <h2 class="row-title">Experience</h2>
+            <div class="scroll-row">
+                <!-- Lapp Insulators -->
+                <div class="card card-wide">
+                    <div class="card-image" style="background: #ffffff;">
+                        <img src="lapp-insulators-logo.svg" alt="Lapp Insulators" class="card-img card-img-contain">
+                        <div class="card-badge" style="background: rgba(0,67,137,0.85);">May 2025 - Aug 2025</div>
+                        <div class="card-image-label">
+                            <h3 style="color: #004389; text-shadow: none;">Software Engineer Co-op</h3>
+                            <p style="color: #004389; text-shadow: none;">LAPP INSULATORS</p>
+                        </div>
+                    </div>
+                    <div class="card-hover-info">
+                        <h3>Software Engineer Co-op</h3>
+                        <p class="card-subtitle">Lapp Insulators</p>
+                        <ul class="card-list">
+                            <li>Optimized backend algorithms, reducing API response time by 45%</li>
+                            <li>Migrated legacy SQL to distributed cloud database for 10K+ daily users</li>
+                            <li>Refactored event-processing system, reducing latency by 25%</li>
+                            <li>Consolidated services into unified architecture for better scalability</li>
+                        </ul>
+                        <div class="card-tags">
+                            <span>Cloud Architecture</span>
+                            <span>SQL</span>
+                            <span>Backend Optimization</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Worldwide Electric -->
+                <div class="card card-wide">
+                    <div class="card-image" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
+                        <img src="worldwideelectric.png" alt="Worldwide Electric" class="card-img">
+                        <div class="card-badge">May 2024 - Aug 2024</div>
+                        <div class="card-image-label">
+                            <h3>Software Engineer Co-op</h3>
+                            <p>WORLDWIDE ELECTRIC</p>
+                        </div>
+                    </div>
+                    <div class="card-hover-info">
+                        <h3>Software Engineer Co-op</h3>
+                        <p class="card-subtitle">Worldwide Electric</p>
+                        <ul class="card-list">
+                            <li>Developed custom solutions using Epicor/Prophet 21 framework and C#</li>
+                            <li>Integrated logging mechanisms with SQL Server Reporting Services (SSRS)</li>
+                            <li>Led cross-functional meetings ensuring project alignment and timeline estimation</li>
+                        </ul>
+                        <div class="card-tags">
+                            <span>C#</span>
+                            <span>SQL Server</span>
+                            <span>Product Management</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Student Lab Instructor -->
+                <div class="card card-wide">
+                    <div class="card-image" style="background: linear-gradient(135deg, #10b981, #047857);">
+                        <img src="Rochester Instittue Of Tech.png" alt="RIT" class="card-img">
+                        <div class="card-badge">Aug 2023 - Present</div>
+                        <div class="card-image-label">
+                            <h3>Student Lab Instructor</h3>
+                            <p>RIT GCCIS</p>
+                        </div>
+                    </div>
+                    <div class="card-hover-info">
+                        <h3>Student Lab Instructor</h3>
+                        <p class="card-subtitle">RIT GCCIS</p>
+                        <ul class="card-list">
+                            <li>Mentoring 25 students in debugging and code analysis</li>
+                            <li>Grading assignments for 50 students with detailed feedback</li>
+                            <li>Teaching industry standards and best practices</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Resident Advisor -->
+                <div class="card card-wide">
+                    <div class="card-image" style="background: linear-gradient(135deg, #8b5cf6, #6d28d9);">
+                        <img src="Rochester Instittue Of Tech.png" alt="RIT" class="card-img">
+                        <div class="card-badge">Aug 2023 - Present</div>
+                        <div class="card-image-label">
+                            <h3>Resident Advisor</h3>
+                            <p>RIT CENTER FOR RESIDENCE LIFE</p>
+                        </div>
+                    </div>
+                    <div class="card-hover-info">
+                        <h3>Resident Advisor</h3>
+                        <p class="card-subtitle">RIT Center for Residence Life</p>
+                        <ul class="card-list">
+                            <li>Crisis management and conflict resolution training</li>
+                            <li>Fostering community development and student growth</li>
+                            <li>Guiding students to essential campus resources</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="content-section fade-in">
+            <h2 class="skills-title">Skills & Technologies</h2>
+
+            <h3 class="skills-category">Languages</h3>
+            <div class="skills-grid">
+                <div class="skill-card-v2">
+                    <div class="skill-icon-v2"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h20v18H2z"/><path d="M8 9v3c0 1 .5 1.5 1.5 1.5S11 13 11 12V9"/><path d="M13 13.5c.5 0 1.5 0 1.5-1.5h-1.5V9h2"/></svg></div>
+                    <span class="skill-name-v2">Java</span>
+                    <span class="skill-desc">Object-Oriented</span>
+                </div>
+                <div class="skill-card-v2">
+                    <div class="skill-icon-v2"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z"/><path d="M8 12l2 2 4-4"/></svg></div>
+                    <span class="skill-name-v2">Python</span>
+                    <span class="skill-desc">Scripting & ML</span>
+                </div>
+                <div class="skill-card-v2">
+                    <div class="skill-icon-v2"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 8l-4 4 4 4"/><path d="M17 8l4 4-4 4"/><path d="M14 4l-4 16"/></svg></div>
+                    <span class="skill-name-v2">C / C++</span>
+                    <span class="skill-desc">Systems Programming</span>
+                </div>
+                <div class="skill-card-v2">
+                    <div class="skill-icon-v2"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 12h3m3 0h-3m0 0V9m0 3v3"/></svg></div>
+                    <span class="skill-name-v2">C#</span>
+                    <span class="skill-desc">.NET Framework</span>
+                </div>
+                <div class="skill-card-v2">
+                    <div class="skill-icon-v2"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16v16H4z"/><path d="M12 8v4l3 3"/></svg></div>
+                    <span class="skill-name-v2">JavaScript</span>
+                    <span class="skill-desc">Full-Stack</span>
+                </div>
+                <div class="skill-card-v2">
+                    <div class="skill-icon-v2"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="12" rx="9" ry="4"/><ellipse cx="12" cy="7" rx="9" ry="4"/><ellipse cx="12" cy="17" rx="9" ry="4"/></svg></div>
+                    <span class="skill-name-v2">SQL</span>
+                    <span class="skill-desc">Database Queries</span>
+                </div>
+            </div>
+
+            <h3 class="skills-category">AI / ML</h3>
+            <div class="skills-grid">
+                <div class="skill-card-v2">
+                    <div class="skill-icon-v2"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4m0 12v4M2 12h4m12 0h4"/><circle cx="12" cy="12" r="4"/><path d="M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/></svg></div>
+                    <span class="skill-name-v2">PyTorch</span>
+                    <span class="skill-desc">Deep Learning</span>
+                </div>
+                <div class="skill-card-v2">
+                    <div class="skill-icon-v2"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+                    <span class="skill-name-v2">TensorFlow</span>
+                    <span class="skill-desc">Neural Networks</span>
+                </div>
+                <div class="skill-card-v2">
+                    <div class="skill-icon-v2"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 5c-4 0-7 3-9 7 2 4 5 7 9 7s7-3 9-7c-2-4-5-7-9-7z"/></svg></div>
+                    <span class="skill-name-v2">Computer Vision</span>
+                    <span class="skill-desc">Image Processing</span>
+                </div>
+                <div class="skill-card-v2">
+                    <div class="skill-icon-v2"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/><path d="M8 10h8M8 14h4"/></svg></div>
+                    <span class="skill-name-v2">NLP</span>
+                    <span class="skill-desc">Text Analysis</span>
+                </div>
+            </div>
+
+            <h3 class="skills-category">Web Development</h3>
+            <div class="skills-grid">
+                <div class="skill-card-v2">
+                    <div class="skill-icon-v2"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/></svg></div>
+                    <span class="skill-name-v2">React</span>
+                    <span class="skill-desc">UI Library</span>
+                </div>
+                <div class="skill-card-v2">
+                    <div class="skill-icon-v2"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12,2 22,20 2,20"/><path d="M12 8v5"/><circle cx="12" cy="16" r="0.5" fill="currentColor"/></svg></div>
+                    <span class="skill-name-v2">Angular</span>
+                    <span class="skill-desc">Frontend Framework</span>
+                </div>
+                <div class="skill-card-v2">
+                    <div class="skill-icon-v2"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+                    <span class="skill-name-v2">Node.js</span>
+                    <span class="skill-desc">Server Runtime</span>
+                </div>
+                <div class="skill-card-v2">
+                    <div class="skill-icon-v2"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div>
+                    <span class="skill-name-v2">Bootstrap</span>
+                    <span class="skill-desc">CSS Framework</span>
+                </div>
+            </div>
+
+            <h3 class="skills-category">Tools & Workflows</h3>
+            <div class="skills-grid">
+                <div class="skill-card-v2">
+                    <div class="skill-icon-v2"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><path d="M12 15V9M9 7.5l3 1.5M15 7.5l-3 1.5"/></svg></div>
+                    <span class="skill-name-v2">Git</span>
+                    <span class="skill-desc">Version Control</span>
+                </div>
+                <div class="skill-card-v2">
+                    <div class="skill-icon-v2"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 15c2-3 4-5 9-5s7 2 9 5"/><path d="M5 10c1-2 3-4 7-4s6 2 7 4"/><circle cx="12" cy="18" r="2" fill="currentColor"/></svg></div>
+                    <span class="skill-name-v2">Azure DevOps</span>
+                    <span class="skill-desc">Cloud CI/CD</span>
+                </div>
+                <div class="skill-card-v2">
+                    <div class="skill-icon-v2"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 8l-4 4 4 4"/><path d="M17 8l4 4-4 4"/></svg></div>
+                    <span class="skill-name-v2">VS Code</span>
+                    <span class="skill-desc">Code Editor</span>
+                </div>
+                <div class="skill-card-v2">
+                    <div class="skill-icon-v2"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 10h8M8 14h5"/></svg></div>
+                    <span class="skill-name-v2">Jupyter</span>
+                    <span class="skill-desc">Notebooks</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="content-section fade-in">
+            <h2 class="row-title">About Me</h2>
+            <div class="about-banner">
+                <div class="about-left">
+                    <div class="about-avatar">
+                        <img src="https://avatars.githubusercontent.com/u/134344348?v=4" alt="Showmik Bhowmik" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
+                    </div>
+                </div>
+                <div class="about-right">
+                    <h3>Hi, I'm Showmik!</h3>
+                    <p>
+                        I'm a Computer Science student at Rochester Institute of Technology, graduating in December 2026.
+                        I'm passionate about building intelligent solutions that make a real impact.
+                    </p>
+                    <p>
+                        With experience across full-stack development, AI/ML and cloud technologies I love tackling
+                        complex challenges. From optimizing backend systems to creating accessible AI tools I'm
+                        constantly learning and growing. And I want to keep growing.
+                    </p>
+                    <p>
+                        When I'm not coding, you'll find me playing soccer, supporting my
+                        community as a Resident Advisor and exploring the latest in tech / AI.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <div class="stat-number">3.78</div>
+                            <div class="stat-label">GPA</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">10K+</div>
+                            <div class="stat-label">Users Impacted</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Students Mentored</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="content-section fade-in">
+            <h2 class="row-title">Let's Connect</h2>
+            <div class="scroll-row contact-row">
+                <a href="mailto:sb4535@g.rit.edu" class="contact-card">
+                    <div class="contact-icon">&#128231;</div>
+                    <h4>Email</h4>
+                    <p>sb4535@g.rit.edu</p>
+                </a>
+                <a href="https://github.com/showmikbhowmik" target="_blank" class="contact-card">
+                    <div class="contact-icon">&#128187;</div>
+                    <h4>GitHub</h4>
+                    <p>showmikbhowmik</p>
+                </a>
+                <a href="https://linkedin.com/in/showmikbhowmik" target="_blank" class="contact-card">
+                    <div class="contact-icon">&#128188;</div>
+                    <h4>LinkedIn</h4>
+                    <p>showmikbhowmik</p>
+                </a>
+                <a href="tel:347-889-0019" class="contact-card">
+                    <div class="contact-icon">&#128241;</div>
+                    <h4>Phone</h4>
+                    <p>347-889-0019</p>
+                </a>
+                <a href="Showmik_Bhowmik_Resume.pdf" target="_blank" class="contact-card">
+                    <div class="contact-icon">&#128196;</div>
+                    <h4>Resume</h4>
+                    <p>View PDF</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 Showmik Bhowmik. Built with passion and code.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        // =============================================
+        // INTRO CANVAS ANIMATION
+        // =============================================
+        let introAnimId = null;
+
+        function startIntroAnimation() {
+            const canvas = document.getElementById('introCanvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            const particles = [];
+            const particleCount = 80;
+            const connectionDist = 150;
+
+            // Create particles
+            for (let i = 0; i < particleCount; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    vx: (Math.random() - 0.5) * 1.5,
+                    vy: (Math.random() - 0.5) * 1.5,
+                    radius: Math.random() * 2 + 1,
+                    opacity: Math.random() * 0.5 + 0.3
+                });
+            }
+
+            // Code characters floating
+            const codeChars = [];
+            const chars = '01{}[]<>/;:=+function()const let var async await import export class return if else for while'.split('');
+            for (let i = 0; i < 40; i++) {
+                codeChars.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    char: chars[Math.floor(Math.random() * chars.length)],
+                    speed: Math.random() * 1.5 + 0.5,
+                    opacity: Math.random() * 0.15 + 0.05,
+                    size: Math.random() * 12 + 10
+                });
+            }
+
+            function animate() {
+                ctx.fillStyle = 'rgba(10, 0, 0, 0.15)';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                // Draw falling code characters
+                codeChars.forEach(c => {
+                    ctx.font = c.size + 'px monospace';
+                    ctx.fillStyle = `rgba(229, 9, 20, ${c.opacity})`;
+                    ctx.fillText(c.char, c.x, c.y);
+                    c.y += c.speed;
+                    if (c.y > canvas.height + 20) {
+                        c.y = -20;
+                        c.x = Math.random() * canvas.width;
+                    }
+                });
+
+                // Draw connections
+                for (let i = 0; i < particles.length; i++) {
+                    for (let j = i + 1; j < particles.length; j++) {
+                        const dx = particles[i].x - particles[j].x;
+                        const dy = particles[i].y - particles[j].y;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+                        if (dist < connectionDist) {
+                            const alpha = (1 - dist / connectionDist) * 0.25;
+                            ctx.beginPath();
+                            ctx.strokeStyle = `rgba(229, 9, 20, ${alpha})`;
+                            ctx.lineWidth = 0.5;
+                            ctx.moveTo(particles[i].x, particles[i].y);
+                            ctx.lineTo(particles[j].x, particles[j].y);
+                            ctx.stroke();
+                        }
+                    }
+                }
+
+                // Draw and update particles
+                particles.forEach(p => {
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(229, 9, 20, ${p.opacity})`;
+                    ctx.fill();
+
+                    p.x += p.vx;
+                    p.y += p.vy;
+
+                    if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+                    if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+                });
+
+                introAnimId = requestAnimationFrame(animate);
+            }
+
+            // Clear canvas first
+            ctx.fillStyle = '#0a0000';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            animate();
+        }
+
+        function stopIntroAnimation() {
+            if (introAnimId) {
+                cancelAnimationFrame(introAnimId);
+                introAnimId = null;
+            }
+        }
+
+        // =============================================
+        // PROFILE GATE & NAVIGATION
+        // =============================================
+        function enterSite() {
+            const gate = document.getElementById('profileGate');
+            const intro = document.getElementById('introScreen');
+            const app = document.getElementById('mainApp');
+
+            // 1. Fade out profile gate
+            gate.classList.add('exiting');
+
+            setTimeout(() => {
+                gate.classList.add('gone');
+
+                // 2. Show intro screen with canvas animation
+                intro.classList.add('active');
+                startIntroAnimation();
+
+                // 3. Trigger text animation after brief delay
+                setTimeout(() => {
+                    document.getElementById('introText').classList.add('show');
+                }, 300);
+
+                // 4. After intro plays, fade it out and show main app
+                setTimeout(() => {
+                    intro.classList.add('fading');
+
+                    setTimeout(() => {
+                        intro.classList.add('gone');
+                        intro.classList.remove('active', 'fading');
+                        stopIntroAnimation();
+                        app.classList.remove('hidden');
+                        app.classList.add('visible');
+                    }, 800);
+                }, 3500);
+            }, 800);
+        }
+
+        // =============================================
+        // SHOWMIK PROFILE PAGE
+        // =============================================
+        let waveAnimId = null;
+
+        function enterShowmikProfile() {
+            const gate = document.getElementById('profileGate');
+            const profile = document.getElementById('showmikProfile');
+            const video = document.getElementById('spVideo');
+
+            gate.classList.add('exiting');
+            setTimeout(() => {
+                gate.classList.add('gone');
+                profile.classList.add('active');
+                video.currentTime = 0;
+                video.play();
+            }, 800);
+        }
+
+        function backFromShowmikProfile() {
+            const profile = document.getElementById('showmikProfile');
+            const gate = document.getElementById('profileGate');
+            const video = document.getElementById('spVideo');
+            profile.classList.remove('active');
+            video.pause();
+            gate.classList.remove('exiting', 'gone');
+        }
+
+        function goToSection(sectionId) {
+            const profile = document.getElementById('showmikProfile');
+            const app = document.getElementById('mainApp');
+            const video = document.getElementById('spVideo');
+            profile.classList.add('sp-fading');
+            setTimeout(() => {
+                profile.classList.remove('active', 'sp-fading');
+                video.pause();
+                app.classList.remove('hidden');
+                app.classList.add('visible');
+                setTimeout(() => {
+                    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+                }, 200);
+            }, 600);
+            return false;
+        }
+
+        function startWaveAnimation() {
+            const canvas = document.getElementById('waveCanvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            let t = 0;
+
+            function drawWave(yBase, amplitude, frequency, speed, color, lineWidth) {
+                ctx.beginPath();
+                ctx.strokeStyle = color;
+                ctx.lineWidth = lineWidth;
+                for (let x = 0; x <= canvas.width; x += 2) {
+                    const y = yBase + Math.sin(x * frequency + t * speed) * amplitude
+                            + Math.sin(x * frequency * 0.5 + t * speed * 0.7) * amplitude * 0.5;
+                    if (x === 0) ctx.moveTo(x, y);
+                    else ctx.lineTo(x, y);
+                }
+                ctx.stroke();
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                // Multiple wave layers
+                drawWave(canvas.height * 0.35, 30, 0.003, 0.8, 'rgba(229, 9, 20, 0.06)', 2);
+                drawWave(canvas.height * 0.40, 25, 0.004, 1.0, 'rgba(229, 9, 20, 0.08)', 1.5);
+                drawWave(canvas.height * 0.45, 35, 0.0025, 0.6, 'rgba(255, 255, 255, 0.04)', 2);
+                drawWave(canvas.height * 0.50, 20, 0.005, 1.2, 'rgba(229, 9, 20, 0.05)', 1);
+                drawWave(canvas.height * 0.55, 28, 0.0035, 0.9, 'rgba(255, 100, 100, 0.06)', 1.5);
+                drawWave(canvas.height * 0.30, 40, 0.002, 0.5, 'rgba(255, 255, 255, 0.03)', 2.5);
+
+                t += 0.02;
+                waveAnimId = requestAnimationFrame(animate);
+            }
+            animate();
+        }
+
+        function stopWaveAnimation() {
+            if (waveAnimId) {
+                cancelAnimationFrame(waveAnimId);
+                waveAnimId = null;
+            }
+        }
+
+        function showProfileGate() {
+            const gate = document.getElementById('profileGate');
+            const app = document.getElementById('mainApp');
+            const intro = document.getElementById('introScreen');
+            const profile = document.getElementById('showmikProfile');
+            app.classList.add('hidden');
+            app.classList.remove('visible');
+            intro.classList.remove('active', 'fading', 'gone');
+            profile.classList.remove('active', 'sp-fading');
+            document.getElementById('spVideo').pause();
+            gate.classList.remove('exiting', 'gone');
+        }
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Scroll fade-in animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // =============================================
+        // HERO CANVAS ANIMATION
+        // =============================================
+        (function() {
+            const canvas = document.getElementById('heroCanvas');
+            const ctx = canvas.getContext('2d');
+
+            function resize() {
+                const section = canvas.parentElement;
+                canvas.width = section.offsetWidth;
+                canvas.height = section.offsetHeight;
+            }
+            resize();
+            window.addEventListener('resize', resize);
+
+            // Floating text items (code, formulas, symbols)
+            const textItems = [];
+            const snippets = [
+                'const x = 42;', 'function()', '{ }', '[ ]', '< / >',
+                'import AI', 'return true;', 'async/await', '=> {}',
+                'if (ready)', 'for (i++)', 'class Dev', '.then()',
+                'npm start', 'npm install', 'npm run build',
+                'git push', 'git pull', 'git commit -m', 'git merge',
+                'git clone', 'git checkout', 'git stash', 'git rebase',
+                'git branch', 'git log --oneline', 'git diff', 'git init',
+                'python3', 'node.js', 'java -jar', 'docker run',
+                'E = mc\u00B2', '\u0394x \u00B7 \u0394p \u2265 \u0127/2',
+                'O(n log n)', '\u2211 f(x)', '\u222B dx', '\u2207\u00B2\u03C8',
+                'P = NP?', '\u03BB x.x', 'f(x) = x\u00B2', '\u03C0 \u2248 3.14',
+                '0 1 0 1', '1 0 1 0', '0xFF', '0b1010',
+                'SELECT *', 'JOIN ON', 'WHERE id',
+                'sudo rm', 'chmod 755', 'ssh root@', 'curl -X POST',
+            ];
+
+            for (let i = 0; i < 45; i++) {
+                textItems.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    text: snippets[Math.floor(Math.random() * snippets.length)],
+                    speed: Math.random() * 0.5 + 0.2,
+                    drift: (Math.random() - 0.5) * 0.3,
+                    opacity: Math.random() * 0.25 + 0.15,
+                    size: Math.random() * 11 + 12,
+                    rotation: (Math.random() - 0.5) * 0.2
+                });
+            }
+
+            // Small particles
+            const particles = [];
+            for (let i = 0; i < 50; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    vx: (Math.random() - 0.5) * 0.6,
+                    vy: (Math.random() - 0.5) * 0.6,
+                    r: Math.random() * 2 + 0.8,
+                    opacity: Math.random() * 0.4 + 0.15
+                });
+            }
+
+            // Computer/monitor shapes
+            const monitors = [];
+            for (let i = 0; i < 8; i++) {
+                monitors.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    speed: Math.random() * 0.25 + 0.1,
+                    drift: (Math.random() - 0.5) * 0.2,
+                    size: Math.random() * 18 + 22,
+                    opacity: Math.random() * 0.18 + 0.1
+                });
+            }
+
+            // Bracket/brace shapes
+            const brackets = [];
+            const braceChars = ['{ }', '< >', '( )', '[ ]', '/* */', '&&', '||', '!='];
+            for (let i = 0; i < 10; i++) {
+                brackets.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    char: braceChars[Math.floor(Math.random() * braceChars.length)],
+                    speed: Math.random() * 0.3 + 0.1,
+                    drift: (Math.random() - 0.5) * 0.15,
+                    size: Math.random() * 16 + 22,
+                    opacity: Math.random() * 0.2 + 0.1
+                });
+            }
+
+            function drawMonitor(x, y, size, opacity) {
+                ctx.strokeStyle = `rgba(255, 255, 255, ${opacity})`;
+                ctx.lineWidth = 1.5;
+                // Screen
+                ctx.strokeRect(x - size * 0.6, y - size * 0.45, size * 1.2, size * 0.8);
+                // Stand
+                ctx.beginPath();
+                ctx.moveTo(x, y + size * 0.35);
+                ctx.lineTo(x, y + size * 0.55);
+                ctx.stroke();
+                // Base
+                ctx.beginPath();
+                ctx.moveTo(x - size * 0.3, y + size * 0.55);
+                ctx.lineTo(x + size * 0.3, y + size * 0.55);
+                ctx.stroke();
+                // Screen content lines
+                ctx.fillStyle = `rgba(255, 255, 255, ${opacity * 0.5})`;
+                for (let i = 0; i < 3; i++) {
+                    const lw = size * (0.4 + Math.random() * 0.4);
+                    ctx.fillRect(x - size * 0.4, y - size * 0.25 + i * size * 0.18, lw, 1.5);
+                }
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                // Draw connection lines between nearby particles
+                for (let i = 0; i < particles.length; i++) {
+                    for (let j = i + 1; j < particles.length; j++) {
+                        const dx = particles[i].x - particles[j].x;
+                        const dy = particles[i].y - particles[j].y;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+                        if (dist < 140) {
+                            ctx.beginPath();
+                            ctx.strokeStyle = `rgba(255, 255, 255, ${(1 - dist / 140) * 0.12})`;
+                            ctx.lineWidth = 0.7;
+                            ctx.moveTo(particles[i].x, particles[i].y);
+                            ctx.lineTo(particles[j].x, particles[j].y);
+                            ctx.stroke();
+                        }
+                    }
+                }
+
+                // Draw particles
+                particles.forEach(p => {
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(255, 255, 255, ${p.opacity})`;
+                    ctx.fill();
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+                    if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+                });
+
+                // Draw floating code/formulas
+                textItems.forEach(t => {
+                    ctx.save();
+                    ctx.translate(t.x, t.y);
+                    ctx.rotate(t.rotation);
+                    ctx.font = `bold ${t.size}px 'Courier New', monospace`;
+                    ctx.fillStyle = `rgba(255, 255, 255, ${t.opacity})`;
+                    ctx.fillText(t.text, 0, 0);
+                    ctx.restore();
+
+                    t.y -= t.speed;
+                    t.x += t.drift;
+                    if (t.y < -30) {
+                        t.y = canvas.height + 30;
+                        t.x = Math.random() * canvas.width;
+                    }
+                    if (t.x < -100) t.x = canvas.width + 50;
+                    if (t.x > canvas.width + 100) t.x = -50;
+                });
+
+                // Draw monitors
+                monitors.forEach(m => {
+                    drawMonitor(m.x, m.y, m.size, m.opacity);
+                    m.y -= m.speed;
+                    m.x += m.drift;
+                    if (m.y < -40) {
+                        m.y = canvas.height + 40;
+                        m.x = Math.random() * canvas.width;
+                    }
+                });
+
+                // Draw large brackets
+                brackets.forEach(b => {
+                    ctx.font = `bold ${b.size}px 'Courier New', monospace`;
+                    ctx.fillStyle = `rgba(255, 255, 255, ${b.opacity})`;
+                    ctx.fillText(b.char, b.x, b.y);
+                    b.y -= b.speed;
+                    b.x += b.drift;
+                    if (b.y < -30) {
+                        b.y = canvas.height + 30;
+                        b.x = Math.random() * canvas.width;
+                    }
+                });
+
+                requestAnimationFrame(animate);
+            }
+
+            animate();
+        })();
+    </script>
+
+</body>
+</html>
