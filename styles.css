@@ -1680,3 +1680,73 @@ body {
         font-size: 2rem;
     }
 }
+
+/* ========================================
+   PER-CARD ACCENT COLORS (Netflix-style tints)
+   Each card sets --accent / --accent-soft inline; red is the fallback.
+   ======================================== */
+.exp-card {
+    border-left-color: var(--accent, var(--netflix-red));
+}
+
+.exp-card:hover {
+    border-color: var(--accent-soft, rgba(229, 9, 20, 0.5));
+    border-left-color: var(--accent, var(--netflix-red));
+    box-shadow: 0 8px 30px var(--accent-soft, rgba(229, 9, 20, 0.15));
+}
+
+.exp-company {
+    color: var(--accent, var(--netflix-red));
+}
+
+.exp-bullets li::before {
+    background: var(--accent, var(--netflix-red));
+}
+
+.exp-logo-text span {
+    color: var(--accent, var(--netflix-red));
+    text-shadow: 0 0 20px var(--accent-soft, rgba(229, 9, 20, 0.5));
+}
+
+.card-tags span {
+    background: var(--accent-soft, rgba(229, 9, 20, 0.15));
+    color: var(--accent, var(--netflix-red));
+    border-color: var(--accent-soft, rgba(229, 9, 20, 0.3));
+}
+
+.card-badge {
+    background: var(--accent, rgba(0, 0, 0, 0.75));
+    color: white;
+}
+
+.card-subtitle {
+    color: var(--accent, var(--netflix-red)) !important;
+}
+
+.card-hover-info {
+    border-top: 2px solid var(--accent, var(--netflix-red));
+}
+
+.stat {
+    background: var(--accent-soft, rgba(229, 9, 20, 0.08));
+    border-color: var(--accent, rgba(229, 9, 20, 0.2));
+}
+
+.stat-number {
+    color: var(--accent, var(--netflix-red));
+}
+
+.skills-category::after {
+    background: var(--accent, var(--netflix-red));
+}
+
+.skill-icon-v2,
+.skill-icon-v2 svg {
+    color: var(--accent, var(--netflix-red));
+    stroke: var(--accent, var(--netflix-red));
+}
+
+.skill-card-v2:hover {
+    border-color: var(--accent, var(--netflix-red));
+    box-shadow: 0 8px 25px var(--accent-soft, rgba(229, 9, 20, 0.1));
+}
