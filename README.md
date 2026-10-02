@@ -34,6 +34,6 @@ Just open `index.html` in a browser. That's it.
 
 ## Contact
 
-- **Email:** munbhowmik5815@gmail.com
+- **Email:** sb4535@g.rit.edu
 - **LinkedIn:** [showmikbhowmik](https://linkedin.com/in/showmikbhowmik)
 - **GitHub:** [ShowmikBhowmik](https://github.com/ShowmikBhowmik)
